@@ -35,6 +35,19 @@ namespace Web.Controllers
             _itemService.DeleteItem(id);
             return Ok();
         }
+        // Método para actualizar un ítem
+        [HttpPut("{id:int}")]
+        public IActionResult Put(int id, ItemDto itemDto)
+        {
+            // Verifica si la actualización fue exitosa
+            var result = _itemService.UpdateItem(id, itemDto);
+            if (!result)
+            {
+                return NotFound("El ítem no fue encontrado.");
+            }
+
+            return Ok("Ítem actualizado exitosamente.");
+        }
 
     }
 }

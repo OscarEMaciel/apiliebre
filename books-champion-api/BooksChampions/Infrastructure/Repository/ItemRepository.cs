@@ -26,6 +26,28 @@ namespace Infrastructure.Repository
             return item.Id;
         }
 
+        public bool UpdateItem(Item item)
+        {
+            // Busca el ítem existente en la base de datos
+            var existingItem = _dbContext.Items.FirstOrDefault(x => x.Id == item.Id);
+
+            if (existingItem != null)
+            {
+                // Actualiza los campos necesarios
+                existingItem.Title = item.Title;
+                existingItem.Description = item.Description;
+                existingItem.Price = item.Price;
+                // Añade más campos según corresponda
+
+                _dbContext.SaveChanges();
+                return true;
+            }
+
+            return false; // Retorna false si el ítem no fue encontrado
+        }
+
+
+
         public void DeleteItem(int id)
         {
             var item = _dbContext.Items.FirstOrDefault(x => x.Id == id);

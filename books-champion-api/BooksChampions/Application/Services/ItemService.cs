@@ -50,5 +50,22 @@ namespace Application.Services
         {
             _itemRepository.DeleteItem(id);
         }
+
+        // Método para actualizar un ítem
+        public bool UpdateItem(int id, ItemDto itemDto)
+        {
+            // Crea un objeto Item a partir del DTO y el ID
+            var item = new Item
+            {
+                Id = id,
+                Title = itemDto.Title,
+                Price = itemDto.Price,
+                Description = itemDto.Description,
+                Category = itemDto.Category,
+                ImageURL = itemDto.ImageURL
+            };
+
+            return _itemRepository.UpdateItem(item);
+        }
     }
 }

@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3013378-09A3-4EAB-99CD-698AD4F46E3C}|Web\\Web.csproj|c:\\users\\moncho\\desktop\\bookchampion api\\books-champion-api\\bookschampions\\web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3013378-09A3-4EAB-99CD-698AD4F46E3C}|Web\\Web.csproj|solutionrelative:web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A3013378-09A3-4EAB-99CD-698AD4F46E3C}|Web\\Web.csproj|c:\\users\\moncho\\desktop\\bookchampion api\\books-champion-api\\bookschampions\\web\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3013378-09A3-4EAB-99CD-698AD4F46E3C}|Web\\Web.csproj|solutionrelative:web\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C98DC27-EF72-4210-A709-8FF0BC2320AD}|Application\\Application.csproj|c:\\users\\moncho\\desktop\\bookchampion api\\books-champion-api\\bookschampions\\application\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C98DC27-EF72-4210-A709-8FF0BC2320AD}|Application\\Application.csproj|solutionrelative:application\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87B0BC87-FB91-45A5-87C6-C8E04E8BF247}|Infrastructure\\Infrastructure.csproj|c:\\users\\moncho\\desktop\\bookchampion api\\books-champion-api\\bookschampions\\infrastructure\\repository\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87B0BC87-FB91-45A5-87C6-C8E04E8BF247}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28C6E7D2-74AC-4EE5-960D-E9C4F56B01DE}|Domain\\Domain.csproj|c:\\users\\moncho\\desktop\\bookchampion api\\books-champion-api\\bookschampions\\domain\\interfaces\\iitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28C6E7D2-74AC-4EE5-960D-E9C4F56B01DE}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\iitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +34,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Web\\Program.cs",
-              "RelativeDocumentMoniker": "Web\\Program.cs",
-              "ToolTip": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Web\\Program.cs",
-              "RelativeToolTip": "Web\\Program.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAqwGUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ItemService.cs",
+              "DocumentMoniker": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Application\\Services\\ItemService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\ItemService.cs",
+              "ToolTip": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Application\\Services\\ItemService.cs",
+              "RelativeToolTip": "Application\\Services\\ItemService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAuwEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T13:44:28.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T20:38:42.817Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ItemController.cs",
               "DocumentMoniker": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Web\\Controllers\\ItemController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\ItemController.cs",
               "ToolTip": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Web\\Controllers\\ItemController.cs",
               "RelativeToolTip": "Web\\Controllers\\ItemController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T13:12:34.16Z"
+              "WhenOpened": "2024-11-05T20:37:21.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IItemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Domain\\Interfaces\\IItemRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IItemRepository.cs",
+              "ToolTip": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Domain\\Interfaces\\IItemRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IItemRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T20:30:46.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Infrastructure\\Repository\\ItemRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\ItemRepository.cs",
+              "ToolTip": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Infrastructure\\Repository\\ItemRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\ItemRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T20:28:53.502Z"
             }
           ]
         }

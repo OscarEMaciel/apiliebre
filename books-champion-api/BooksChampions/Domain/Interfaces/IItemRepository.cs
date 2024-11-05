@@ -11,5 +11,8 @@ namespace Domain.Interfaces
         List<Item> GetItems();
         int AddItem(Item item);
         void DeleteItem(int id);
+
+        // Método para actualizar un ítem existente
+        bool UpdateItem(Item item);
     }
 }
