@@ -8,22 +8,20 @@ using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Reflection;
 using System.Text;
 using static Infrastructure.Services.AuthenticationService;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddCors();
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Configure Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(setupAction =>
 {
-    setupAction.AddSecurityDefinition("BookChampionsApiBearerAuth", new OpenApiSecurityScheme() //Esto va a permitir usar swagger con el token.
+    setupAction.AddSecurityDefinition("ItemChampionsApiBearerAuth", new OpenApiSecurityScheme
     {
         Type = SecuritySchemeType.Http,
         Scheme = "Bearer",
@@ -38,22 +36,24 @@ builder.Services.AddSwaggerGen(setupAction =>
                 Reference = new OpenApiReference
                 {
                     Type = ReferenceType.SecurityScheme,
-                    Id = "BookChampionsApiBearerAuth" } //Tiene que coincidir con el id seteado arriba en la definición
-                }, new List<string>() }
+                    Id = "ItemChampionsApiBearerAuth" // Debe coincidir con el ID seteado arriba en la definición
+                },
+                // No es necesario inicializar una lista vacía aquí
+            },
+            new List<string>()
+        }
     });
-
-
 });
 
-string connectionString = builder.Configuration["ConnectionStrings:BooksDBConnectionString"]!;
+// Cambia el nombre de la cadena de conexión en el archivo de configuración si es necesario
+string connectionString = builder.Configuration["ConnectionStrings:ItemsDBConnectionString"]!;
 
-// Configure the SQLite connection
-var connection = new SqliteConnection(connectionString);
-connection.Open();
+// Configure la conexión SQLite
+builder.Services.AddDbContext<ItemDbContext>(dbContextOptions =>
+    dbContextOptions.UseSqlite(connectionString)); // Utiliza directamente la cadena de conexión
 
-
-builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntenticación que tenemos que elegir después en PostMan para pasarle el token
-    .AddJwtBearer(options => //Acá definimos la configuración de la autenticación. le decimos qué cosas queremos comprobar. La fecha de expiración se valida por defecto.
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer(options =>
     {
         options.TokenValidationParameters = new()
         {
@@ -64,29 +64,24 @@ builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntentica
             ValidAudience = builder.Configuration["AuthenticacionService:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["AuthenticacionService:SecretForKey"]))
         };
-    }
-);
-
-builder.Services.AddDbContext<BookDbContext>(dbContextOptions => dbContextOptions.UseSqlite(connection));
+    });
 
 #region Repositories
 
-builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<IItemRepository, ItemRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-
 
 #endregion
 
 #region Services
 
-builder.Services.AddScoped<BookService>();
+builder.Services.AddScoped<ItemService>(); // Cambiado de BookService a ItemService
 builder.Services.AddScoped<UserService>();
 builder.Services.Configure<AuthenticacionServiceOptions>(
-   builder.Configuration.GetSection(AuthenticacionServiceOptions.AuthenticacionService));
-builder.Services.AddScoped<ICustomAuthenticationService,AuthenticationService>();
+    builder.Configuration.GetSection(AuthenticacionServiceOptions.AuthenticacionService));
+builder.Services.AddScoped<ICustomAuthenticationService, AuthenticationService>();
 
 #endregion
-
 
 var app = builder.Build();
 
@@ -98,7 +93,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:5173"));
 app.UseAuthorization();
 

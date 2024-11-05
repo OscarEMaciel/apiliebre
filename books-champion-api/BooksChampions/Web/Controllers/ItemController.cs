@@ -9,30 +9,30 @@ namespace Web.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class BookController : ControllerBase
+    public class ItemController : ControllerBase
     {
-        private readonly BookService _bookService;
+        private readonly ItemService _itemService;
 
-        public BookController(BookService bookService) {
-            _bookService = bookService;
+        public ItemController(ItemService itemService) {
+            _itemService = itemService;
         }
 
         [HttpGet]
         public IActionResult Get() {
 
-            return Ok(_bookService.GetBooks());
+            return Ok(_itemService.GetItems());
         }
 
         [HttpPost]
-        public IActionResult Post(BookDto bookDto)
+        public IActionResult Post(ItemDto itemDto)
         {
-            return Ok(_bookService.AddBook(bookDto));
+            return Ok(_itemService.AddItem(itemDto));
         }
 
         [HttpDelete("{id:int}")]
         public IActionResult Delete(int id)
         {
-            _bookService.DeleteBook(id);
+            _itemService.DeleteItem(id);
             return Ok();
         }
 

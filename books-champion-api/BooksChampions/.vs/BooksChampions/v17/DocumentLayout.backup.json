@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{87B0BC87-FB91-45A5-87C6-C8E04E8BF247}|Infrastructure\\Infrastructure.csproj|c:\\users\\moncho\\desktop\\bookchampion api\\books-champion-api\\bookschampions\\infrastructure\\migrations\\20241105135259_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87B0BC87-FB91-45A5-87C6-C8E04E8BF247}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20241105135259_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3013378-09A3-4EAB-99CD-698AD4F46E3C}|Web\\Web.csproj|c:\\users\\moncho\\desktop\\bookchampion api\\books-champion-api\\bookschampions\\web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3013378-09A3-4EAB-99CD-698AD4F46E3C}|Web\\Web.csproj|solutionrelative:web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3013378-09A3-4EAB-99CD-698AD4F46E3C}|Web\\Web.csproj|c:\\users\\moncho\\desktop\\bookchampion api\\books-champion-api\\bookschampions\\web\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3013378-09A3-4EAB-99CD-698AD4F46E3C}|Web\\Web.csproj|solutionrelative:web\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20241105135259_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Infrastructure\\Migrations\\20241105135259_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20241105135259_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Infrastructure\\Migrations\\20241105135259_InitialCreate.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20241105135259_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T13:52:59.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Web\\Program.cs",
+              "RelativeDocumentMoniker": "Web\\Program.cs",
+              "ToolTip": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Web\\Program.cs",
+              "RelativeToolTip": "Web\\Program.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T13:44:28.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemController.cs",
+              "DocumentMoniker": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Web\\Controllers\\ItemController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\ItemController.cs",
+              "ToolTip": "C:\\Users\\Moncho\\Desktop\\bookchampion api\\books-champion-api\\BooksChampions\\Web\\Controllers\\ItemController.cs",
+              "RelativeToolTip": "Web\\Controllers\\ItemController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T13:12:34.16Z",
+              "EditorCaption": ""
             }
           ]
         }

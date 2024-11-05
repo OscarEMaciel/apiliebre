@@ -6,9 +6,9 @@ namespace Infrastructure.Repository
 {
     public class UserRepository : IUserRepository
     {
-        private readonly BookDbContext _dbContext;
+        private readonly ItemDbContext _dbContext;
 
-        public UserRepository(BookDbContext dbContext)
+        public UserRepository(ItemDbContext dbContext)
         {
             _dbContext = dbContext;
         }
